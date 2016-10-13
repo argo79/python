@@ -1,0 +1,75 @@
+GITHUB.COM
+
+Cartella a monte del progetto:
+$ git clone https://github.com/argo79/python
+ crea una cartella python con tutto ciò che c'è dentro al rep sul sito web
+
+$ git status
+controlla lo stato del git se c'è roba da fare o in sospeso...
+$ git diff			//cosa non c'è in stage
+$ git diff –cached		//cosa c'è in stage
+
+$ git add README
+mette il file README in “stage” cioè in fase “pronto per l'upload sul server”....
+oppure una directory seguita da / (directory/)
+
+$ git commit
+carica tutto ciò che c'è in stage (ma non ancora sul repository web!!!!!!) aggiungere una riga nel filedi testo che si apre...per spiegare la modifica!
+
+$ git commit -m "Storia 182: Corretti benchmarks per la velocità"
+evita il file (scrive subito il perché della modifica!!!!)
+
+$ git commit -a
+mette in stage i file già tracciati senza usare git add??? questa non l'ho capita!!!
+
+$ git rm nome.file
+toglie dall'area di stage il file...(magari l'avevi cancellato con un rm file...)
+
+$ git rm --cached readme.txt
+lo toglie solo dallo stage e non dal disco!!!
+
+$ git mv README README.txt
+è uguale a:
+$ mv README README.txt
+$ git rm README
+$ git add README.txt
+
+$ git log
+mostra tutte le modifiche dalla più recente.....
+$ git log -p -2
+-p differenze tra commit
+-2 ultime due variazioni
+
+$ git commit –amend
+annulla l'ULTIMA commit per X motivi....o cambi il messaggio....
+
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+
+trovo solo una commit
+
+$ git reset HEAD file
+elimina il file dallo stage
+
+$ git checkout – file
+annulla tutte le modifiche o ripristina lo stato del clone iniziale!!!!
+
+$ git remote -v
+mostra l'url associato al git del repository remoto
+
+$ git remote add pb git://github.com/paulboone/ticgit.git
+aggiunge un git alla cartella (simile a clone) con un nome breve: pb in questo caso
+nel caso di “clone” il nome breve sarà origin!!!!
+
+$ git fetch pb
+prende tutto quello che c'è nel git remoto ticgit.git
+
+$ git pull 
+scarica una diramazione remota nella attuale sul pc
+
+$ git push origin master
+carica il progetto sul server remoto nella sezione master!!!
+
+$ git remote show origin
+mostra i repository remoti (url) associati
